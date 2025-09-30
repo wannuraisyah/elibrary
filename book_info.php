@@ -140,5 +140,5 @@ if (isset($_GET['id'])) {
     </center>
 </body>
 <br>
-<footer><center><h2>&copy; wannuraisyah</h2></center></footer>
+<footer><center><h2>&copy;  WNA</h2></center></footer>
 </html>
