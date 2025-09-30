@@ -61,7 +61,7 @@ include "config.php";
             <div class="inputbox">
                 <ion-icon name="mail-outline"></ion-icon>
                 <input type="text" name="username" required>
-                <label for="">Email</label>
+                <label for="">Username</label>
             </div>
             <div class="inputbox">
                 <ion-icon name="lock-closed-outline"></ion-icon>
@@ -96,3 +96,4 @@ include "config.php";
     </section>
 </body>
 </html>
+
