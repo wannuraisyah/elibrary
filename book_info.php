@@ -54,9 +54,13 @@ if (isset($_GET['id'])) {
     img {
         border-radius: 3px;
     }
+
+    h1{
+			font-family: mv boli;
+    }
 </style>
 </head>
-<body class="container2">
+<body class="container">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <button onclick="document.location='book_list.php'" class="buttonback">
@@ -84,7 +88,7 @@ if (isset($_GET['id'])) {
             </tr>
         </table>
         <br>
-        <!-- ✅ READ NOW button to open PDF -->
+        <!-- open PDF -->
         <a href="files/<?php echo htmlspecialchars($res['file']); ?>" target="_blank" class="buttonb">READ NOW
             <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
                 <path fill-rule="evenodd"
@@ -114,7 +118,6 @@ if (isset($_GET['id'])) {
         ?>
         <br>
         <?php
-            // ✅ Here we match writer.name with story.author
             $author = mysqli_real_escape_string($con, $res['author']);
             $pull = mysqli_query($con, "SELECT * FROM writer WHERE author = '$author' LIMIT 1");
             
@@ -136,4 +139,6 @@ if (isset($_GET['id'])) {
         ?>
     </center>
 </body>
+<br>
+<footer><center><h2>&copy; wannuraisyah</h2></center></footer>
 </html>
