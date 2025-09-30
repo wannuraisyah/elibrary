@@ -199,11 +199,15 @@ td{
     font-size: 18px;
     font-weight: 600;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding: 20px;
+    padding: 10px;
     color: #25241c;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: transform 0.2s;
+    transition: opacity 0.4s ease;
+}
+
+.card.fade-out {
+    opacity: 0;
 }
 
 .card:hover {
@@ -226,9 +230,10 @@ td{
 
 .App-button {
     padding: 8px 16px;
+    margin: 10px;
     background-color: transparent;
     color: #25241c;
-    font-size: 14px;
+    font-size: 15px;
     border: 2px solid #25241c;
     border-radius: 5em;
     margin-top: 10px;
@@ -302,6 +307,21 @@ body {
 h1 {
     margin-top: 20px;
     font-family: Arial, sans-serif;
+}
+
+.card3 {
+    background-color: #E9B3FB;
+    border: 3px solid #25241c;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    color: #25241c;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
 }
 
 /* button arrangement */
@@ -736,4 +756,177 @@ button {
         rgb(189, 42, 230) 94.3%
     );
     transition: all 0.475s;
+}
+
+/* BUTTON in author info */
+/* From Uiverse.io by SteveBloX */ 
+.buttong {
+    width: 90px;
+    height: 40px;
+    border: 2px solid #087e0a;
+    border-radius: 45px;
+    transition: all 0.3s;
+    cursor: pointer;
+    background: white;
+    font-size: 1em;
+    font-weight: 550;
+    margin: 10px;
+}
+
+.buttong:hover {
+    background: #087e0a;
+    color: white;
+    font-size: 1.2em;
+}
+
+/* INDEX STYLE */
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.content h1 {
+    font-size: 8rem;
+    font-weight: 600;
+    -webkit-text-stroke: 2px rgb(168, 239, 255, 1);
+    color: transparent;
+    transition: all 0.5s ease;
+}
+
+.btn-2 {
+    width: 180px;
+    height: 50px;
+    border-radius: 5px;
+    background: transparent;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.3s ease-in;
+}
+
+.btn-2:hover {
+    transform: translateY(-5px);
+}
+
+.light::before {
+    content: "";
+    position: absolute;
+    background-image: conic-gradient(
+        rgb(168, 239, 255, 1) 20deg,
+        transparent 150deg
+    );
+    width: 400%;
+    height: 400%;
+    border-radius: 5px;
+    animation: rotate 3s linear infinite;
+}
+
+.light::after {
+    content: "Explore";
+    position: absolute;
+    width: 170px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(35px);
+    -webkit-backdrop-filter: blur(35px);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 450px) {
+    .content h1 {
+        font-size: 3rem;
+    }
+    
+    .btn-2 {
+        width: 130px;
+    }
+    
+    .light::after {
+        width: 120px;
+        font-size: 0.9rem;
+    }
+}
+
+/* PASS PAGE */
+
+
+
+.inputbox {
+    position: relative;
+    margin: 30px 0;
+    max-width: 310px;
+    border-bottom: 2px solid #fff;
+}
+
+.inputbox label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+}
+
+input:focus ~ label, 
+input:valid ~ label {
+    top: -5px;
+}
+
+.inputbox input {
+    width: 100%;
+    height: 60px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 0 35px 0 5px;
+    color: #fff;
+}
+
+.inputbox ion-icon {
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2rem;
+    top: 20px;
+}
+
+.buttonh {
+    width: 80%;
+    height: 40px;
+    border-radius: 40px;
+    background-color: rgb(255, 255,255, 1);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.4s ease;
+}
+
+.buttonh:hover {
+    background-color: rgb(255, 255,255, 0.5);
 }
